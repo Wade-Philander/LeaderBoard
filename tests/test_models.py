@@ -23,7 +23,7 @@ class TestModel(TestCase):
         self.assertEqual(a.points,500000)
 
     def test_user(self):
-        user = User(email="gmail.com", password="qwerty", first_name="Wade", team_leader=True, work="work", points=10)
+        user = User(email="gmail.com", password="qwerty", first_name="Wade", team_leader=True, points=10)
 
         
         self.assertEqual(user.email, "gmail.com")
@@ -31,11 +31,14 @@ class TestModel(TestCase):
         self.assertEqual(user.first_name, "Wade")
         self.assertIsNotNone(user.notes)
         self.assertEqual(user.team_leader, True)
-        self.assertEqual(user.work, "work")
         self.assertEqual(user.points,10)
 
+    def test_team(self):
+        team = Team(id=5, name="Haikyuu!!:To the Top")
 
-
+        self.assertEqual(team.id, 5)
+        self.assertEqual(team.name, "Haikyuu!!:To the Top")
+        
 
 
 

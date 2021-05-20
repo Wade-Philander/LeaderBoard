@@ -20,7 +20,7 @@ def log_in():
                 return redirect(url_for('views.home'))
             else:
                 flash(passw, category='error')
-        else:
+        else: 
             flash('Email does not exist', category='error')
 
     return render_template('login.html', user=current_user)
