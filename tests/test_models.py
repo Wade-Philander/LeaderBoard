@@ -4,7 +4,7 @@ import sys
 sys.path.append("website\models")
 from website.models import Note, Work, User, Team
 
-class TestModel(TestCase):
+class TestModel(TestCase): 
     def test_note(self):
         i = Note(data="Test", date=2021/5/19,  user_id=2)
 
