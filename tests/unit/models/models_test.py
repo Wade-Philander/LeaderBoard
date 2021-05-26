@@ -1,6 +1,7 @@
 from unittest import TestCase
 from website.models import Note, Work, User, Team
 
+
 class TestAllModels(TestCase):
 
     def test_note_is_created(self):

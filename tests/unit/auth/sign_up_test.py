@@ -43,7 +43,7 @@ class TestSignUp(BaseTest):
             # assert user is not logged in
             self.assertIsNone(current_user.get_id())
 
-
+q
     # test sign up post if name is 1 char
     def test_sign_up_post_short_name(self):
         with self.app:
@@ -77,4 +77,4 @@ class TestSignUp(BaseTest):
             user = db.session.query(User).filter_by(email='email@gmail.com').first()
             self.assertFalse(user)
             # assert user is not logged in
-            self.assertIsNone(current_user.get_id()) 
+            self.assertIsNone(current_user.get_id())
