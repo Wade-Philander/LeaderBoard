@@ -43,14 +43,14 @@ class TestSignUp(BaseTest):
             # assert user is not logged in
             self.assertIsNone(current_user.get_id())
 
-q
+
     # test sign up post if name is 1 char
     def test_sign_up_post_short_name(self):
         with self.app:
-            # create post
+        # create post
             response = self.app.post('/sign-up', 
-                                     data=dict(email='email@gmail.com', firstName='h', password1='pass1234', password2='pass1234'),
-                                     follow_redirects=True)
+                                        data=dict(email='email@gmail.com', firstName='h', password1='pass1234', password2='pass1234'),
+                                        follow_redirects=True)
             # assert that flash message appears
             self.assertIn(b'First name must be greater than 1 character', response.data)  
             # assert status code

@@ -29,7 +29,7 @@ class TestLogIn(BaseTest):
             response = self.app.post('/log-in',
                            data=dict(email='meh@gmail.com', firstName='NormalName', password1='pass1234'),
                            follow_redirects=True)
-            
+            self.assertTrue(user)
             self.assertIn(b'You have logged in' ,response.date)
             self.assertAlmostEqual(response.status_code,200)
 
